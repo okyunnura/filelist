@@ -1,0 +1,13 @@
+{
+  "require": {
+    "league/flysystem": "^1.0",
+    "tightenco/collect": "^5.8",
+    "illuminate/database": "^5.8",
+    "illuminate/events": "^5.8",
+    "robmorgan/phinx": "^0.10.8",
+    "nesbot/carbon": "^2.23",
+    "vlucas/phpdotenv": "^3.4",
+    "ext-json": "*",
+    "ext-intl": "*"
+  }
+}

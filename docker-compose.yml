@@ -1,0 +1,17 @@
+version: "3"
+services:
+  db:
+    container_name: "${COMPOSE_PROJECT_NAME}-db"
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      TZ: "Asia/Tokyo"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf
+volumes:
+  mysql-data:
+    external:
+      name: "${DOCKER_MYSQL_VOLUME_NAME}"
